@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>TOPIK考级服务</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #FFD700; /* 黄色 */
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #FF6600; /* 橙色 */
+            width: 200px;
+            height: calc(100vh - 80px);
+            float: left;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #FF4500; /* 红色 hover */
+        }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+            min-height: calc(100vh - 120px);
+            background-color: #F0F0F0;
+        }
+        footer {
+            background-color: #DA70D6; /* 紫色 */
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .home-text {
+            width: 50%;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .home-image img {
+            width: 450px;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 250px;
+            border: 3px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>TOPIK考级服务 - 包过四级 保录入学</header>
+
+<nav>
+    <a href="#" onclick="showSection('home')">首页</a>
+    <a href="#" onclick="showSection('process')">考试流程</a>
+    <a href="#" onclick="showSection('success')">成功案例</a>
+    <a href="#" onclick="showSection('contact')">联系方式</a>
+</nav>
+
+<main>
+    <div id="home" class="content-section active">
+        <div class="home-content">
+            <div class="home-text">
+                <h1>TOPIK考级包过</h1>
+                <p>包过四级，入学毕业困难可咨询</p>
+                <p>安全、稳定、流程完善，全程协助</p>
+                <p>线上或线下签法务合同都可</p>
+
+                <div class="qr-code">
+                    <h3>扫码添加微信咨询</h3>
+                    <img src="0d13f6e75bd0567a535ee1cf96f1ba1.jpg" alt="微信二维码">
+                </div>
+            </div>
+
+            <div class="home-image">
+                <img src="02ef7995-c491-4256-a0db-d033a40522b5.png" alt="成功故事">
+            </div>
+        </div>
+    </div>
+
+    <div id="process" class="content-section">
+        <h2>考试流程</h2>
+        <ol>
+            <li>支付定金，代报名韩国考场</li>
+            <li>安排考手群，全程指导</li>
+            <li>考试结束，出成绩后补尾款</li>
+        </ol>
+    </div>
+
+    <div id="success" class="content-section">
+        <h2>成功案例</h2>
+        <div class="gallery">
+            <img src="images/B5CABEDE14310334521A1C3AD4B92E6C.png" alt="成功案例1">
+            <img src="images/9761231A6A2A4B6B84350102BD11A2DD.png" alt="成功案例2">
+            <img src="images/DC2ED8926AE839B59DDB561484F35F35.png" alt="成功案例3">
+            <img src="images/B3A2304DD2F9D7F77067C6AFB375BF98.png" alt="成功案例4">
+            <img src="images/F994448AC1498FFC79E887413625479B.png" alt="成功案例5">
+            <img src="images/6A16A0F1562F2A4DC3D7CFE8C8FFE820.png" alt="成功案例6">
+            <img src="images/2CC9BCAE610F705B9FA4915371627AE8.png" alt="成功案例7">
+        </div>
+    </div>
+
+    <div id="contact" class="content-section">
+        <h2>联系方式</h2>
+        <p>微信：shuxuejueshi</p>
+        <p>QQ：1252269069</p>
+    </div>
+</main>
+
+<footer>TOPIK考级服务，微信：shuxuejueshi，QQ：1252269069</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
